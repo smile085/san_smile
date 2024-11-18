@@ -1,0 +1,85 @@
+<?php
+
+$db_name - 'msqli:host=localhost;dbname=cafe_db'
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cndjs.cloudflare.com/ajax/libs/font-awasome/4.7.0.css">
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="navbar">
+                <img src="th-removebg-preview.png" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">shop</a></li>
+                        <li><a href="#">recipes</a></li>
+                        <li><a href="#">menu</a></li>
+                        <li><a href="#">order</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class"banner">
+            <div class="text">
+                <div class="text-inner">
+                    <h1>4 Ever Love</h1>
+                    <p>lorem ipsum dolor sit amet consectetur,adipisicing elit.cum perferendis fuga odit aut nemo deleniti deserunt quia </p>
+                    <br>
+                    <button type="button">read more</button>
+                </div>
+            </div>
+            <div class="img">
+                <div class="img-inner">
+                    <img src="kopi-removebg-preview.png">
+                    <div class="info-dot">
+                        <button><i class="fa fa-heart"></i></button>
+                    <div class="info-detail">
+                        <h3>coffee</h3>
+                        <p>lorem ipsum dolor sif amet consettetur adipisicing elit.nukuam eius pariatur ipsam</p>
+                        <br>
+                    
+                    </div>
+                    </div>
+                    <div class="info-dot">
+                        <button><i class="fa fa-heart"></i></button>
+                    <div class="info-detail">
+                        <h3>coffee</h3>
+                        <p>lorem ipsum dolor sif amet consettetur adipisicing elit.nukuam eius pariatur ipsam</p>
+
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.main.js"></script>
+    <script>
+        $(function(){
+            $("info-dot").on('click',function(e){e.stopPropagation();
+                $(this).find(".info-detail").addClass("show");
+                $(".info-dot").not(this).find(".info-detail").removeClass("show");
+            });
+            $(document).on('click',function(){
+                $(".info-detail").removeClass("show");
+            });
+            $(".info-detail").on('click',function(e){
+                e.stopPropagation();
+            });
+        });
+    </script>
+    
+</body>
+</html>
